@@ -33,7 +33,7 @@ public void setHeight(float height) {
 }
 @Override
 public String toString() {
-	return "Wrestler [w_name=" + w_name + ", w_weight=" + w_weight + ", height=" + height + "]";
+	return "Wwe [w_name=" + w_name + ", w_weight=" + w_weight + ", height=" + height + "]";
 }
 @Override
 public int compare(Wrestler o1, Wrestler o2) {
