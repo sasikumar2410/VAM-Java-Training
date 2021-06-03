@@ -17,7 +17,7 @@ public class EmployeeDemo {
 			System.out.println("driver class loaded");
 
 			// Step-2
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/vam.sql.training?autoReconnect=true&useSSL=false\r\n", "root", "root");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/vam.sql.training?autoReconnect=true&useSSL=false", "root", "root");
 			System.out.println("Connected");
 			System.out.println("please enter the option");
 			System.out.println("1.add employee");
