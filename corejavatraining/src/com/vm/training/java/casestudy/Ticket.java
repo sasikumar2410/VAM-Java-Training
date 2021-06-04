@@ -165,9 +165,9 @@ public class Ticket
 	public void addPassenger(String name, int age, char gender) 
 	{
 		Passenger passenger=new Passenger(name,age,gender);
-		Integer ticFare=(int)calcPassengerFare(new Passenger(name,age,gender));
+		Integer ticfare=(int)calcPassengerFare(new Passenger(name,age,gender));
 		passengers=new TreeMap<Passenger,Integer>();
-		passengers.put(passenger, ticFare);
+		passengers.put(passenger, ticfare);
 		calculateTotalTicketPrice();
 		for(Map.Entry<Passenger,Integer> entry : passengers.entrySet())
 		{

@@ -18,7 +18,7 @@ public class TicketApplication {
 		// TODO Auto-generated method stub
 		TrainDAO trainDao=new TrainDAO();
 		Ticket ticket=null;
-		double ticketPrice=0;
+		double ticketPrice = 0;
 		System.out.println("============Welcome to Train Ticket Booking==========");
 		System.out.println("Enter the train no");
 		Scanner sc=new Scanner(System.in);
@@ -55,10 +55,12 @@ public class TicketApplication {
 					if(gender=='F'|| gender== 'f'|| gender=='M'|| gender=='m'){
 						Passenger passenger=new Passenger(name,age,gender);
 						ticket.addPassenger(name, age, gender);
+						//ticketPrice=ticketPrice+ticket.calcPassengerFare(passenger);
 						ticketPrice=ticketPrice+ticket.calculateTotalTicketPrice();
 					}
 					else
 					{
+						
 						System.out.println("Please enter correct gender");
 					}
 				}
