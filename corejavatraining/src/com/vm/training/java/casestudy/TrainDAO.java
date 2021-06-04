@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 public class TrainDAO 
 {
 
-	Train train;
+	Train train1;
 
 	@SuppressWarnings("unused")
 	public Train findTrain( int train_num) throws Exception
@@ -27,13 +27,13 @@ public class TrainDAO
 			String train_source=rs.getString("train_source");
 			String train_destination=rs.getString("train_destination");
 			Double ticket_price=rs.getDouble("ticket_price");
-			train=new Train(train_num,train_name,train_source,train_destination,ticket_price);
-			System.out.println(train_name);
+			train1=new Train(train_num,train_name,train_source,train_destination,ticket_price);
+			System.out.println(train1);
 			if(rs==null)
 			{
 				System.out.println("Train no not found");
 			}
 		}
-		return train;
+		return train1;
 	}
 }

@@ -2,11 +2,11 @@ package com.vm.training.java.casestudy;
 
 public class Train 
 {
-	int train_number;
-	String train_name;
-	String train_source;
-	String train_destination;
-	double train_ticketPrice;
+	 int train_number;
+	 String train_name;
+	 String train_source;
+	 String train_destination;
+	 double train_ticketPrice;
 	/**
 	 * This was parameterized constructor of class train by its variables
 	 * @param train_number
@@ -64,6 +64,7 @@ public class Train
 	public void setTrain_ticketPrice(double train_ticketPrice) {
 		this.train_ticketPrice = train_ticketPrice;
 	}
+	
 	/**
 	 * This method is used to print the data of the class 
 	 */

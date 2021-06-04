@@ -17,7 +17,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-import com.vm.training.java.jdbcConnectionUsingMethods.DBConnection;
+
 
 public class Ticket
 {
@@ -25,7 +25,7 @@ public class Ticket
 	private int counter = 100;
 	private String pnr;
 	private Date travelDate;
-	private Train train;
+	private Train train1;
 	private TreeMap<Passenger, Integer> passengers;
 	
 	/**
@@ -44,7 +44,7 @@ public class Ticket
 	{
 		super();
 		this.travelDate = travelDate;
-		this.train = train;
+		this.train1 = train;
 	}
 
 	/**
@@ -83,12 +83,12 @@ public class Ticket
 
 	public Train getTrain() 
 	{
-		return train;
+		return train1;
 	}
 
 	public void setTrain(Train train) 
 	{
-		this.train = train;
+		this.train1 = train;
 	}
 
 	public TreeMap<Passenger, Integer> getPassengers() 
@@ -107,7 +107,7 @@ public class Ticket
 	@Override
 	public String toString() 
 	{
-		return "pnr=" + pnr + ", travelDate=" + travelDate + ", train=" + train + ", passengers=" + passengers;
+		return "pnr=" + pnr + ", travelDate=" + travelDate + ", train=" + train1 + ", passengers=" + passengers;
 	}
 
 	/**
@@ -116,9 +116,9 @@ public class Ticket
 	 */
 	public String generatePNR() 
 	{
-        String sc = String.valueOf(train.getTrain_source().charAt(0));
-		String dest = String.valueOf(train.getTrain_destination().charAt(0));
-		DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+        String sc = String.valueOf(train1.getTrain_source().charAt(0));
+		String dest = String.valueOf(train1.getTrain_destination().charAt(0));
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String strDate = dateFormat.format(travelDate);
 		String pnr = sc + dest + "_" + strDate + "_" + counter++;
 		return pnr;
@@ -134,27 +134,27 @@ public class Ticket
 	 */
 	public double calcPassengerFare(Passenger passenger) 
 	{
-		double Fare=0;
-	
+		double fare=0;
+
 		if(passenger.getPassenger_age()<=12)
 		{
-			Fare=train.getTrain_ticketPrice()-0.50*(train.getTrain_ticketPrice());
-		     }
-             else if(passenger.getPassenger_age()>=60)
-             {
-            	 Fare=train.getTrain_ticketPrice()-0.60*(train.getTrain_ticketPrice());
- 
-             }
-		    else if(passenger.getPassenger_gender()=='F'||passenger.getPassenger_gender()=='f' )
-		     {
-		    	Fare=train.getTrain_ticketPrice()-0.25*(train.getTrain_ticketPrice());
-		     }
-		    else
-		    {
-		    	Fare=train.getTrain_ticketPrice();
-		    }
-		System.out.println(Fare);
-	         return Fare;
+			fare=train1.getTrain_ticketPrice()-0.50*(train1.getTrain_ticketPrice());
+		}
+		else if(passenger.getPassenger_age()>=60)
+		{
+			fare=train1.getTrain_ticketPrice()-0.60*(train1.getTrain_ticketPrice());
+
+		}
+		else if(passenger.getPassenger_gender()=='F'||passenger.getPassenger_gender()=='f' )
+		{
+			fare=train1.getTrain_ticketPrice()-0.25*(train1.getTrain_ticketPrice());
+		}
+		else
+		{
+			fare=train1.getTrain_ticketPrice();
+		}
+		System.out.println(fare);
+	         return fare;
 	}
     /**
      * this method is used to add data of passinger to treeset
@@ -200,10 +200,10 @@ public class Ticket
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");  
 		String strDate = dateFormat.format(getTravelDate());
 	    sb.append("PNR         : "+generatePNR()+"\n");
-		sb.append("Train no    : "+train.getTrain_number()+"\n");
-		sb.append("Train Name  : "+train.getTrain_name()+"\n");
-		sb.append("Source      : "+train.getTrain_source()+"\n");
-		sb.append("Destination : "+train.getTrain_destination()+"\n");
+		sb.append("Train no    : "+train1.getTrain_number()+"\n");
+		sb.append("Train Name  : "+train1.getTrain_name()+"\n");
+		sb.append("Source      : "+train1.getTrain_source()+"\n");
+		sb.append("Destination : "+train1.getTrain_destination()+"\n");
 		sb.append("Travel Date : "+strDate+"\n");
 		sb.append("Passengers\n");
 		sb.append("Name          Age        Gender      TicketFare\n");
