@@ -22,11 +22,11 @@ import java.util.TreeMap;
 public class Ticket
 {
 	
-	private int counter = 100;
-	private String pnr;
-	private Date travelDate;
-	private Train train1;
-	private TreeMap<Passenger, Integer> passengers;
+	static int counter = 100;
+	static String pnr;
+	static Date travelDate;
+	static Train train1;
+	static TreeMap<Passenger, Integer> passengers;
 	
 	/**
 	 * Default constucture
