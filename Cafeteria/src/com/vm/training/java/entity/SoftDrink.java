@@ -22,8 +22,7 @@ public class SoftDrink implements ISoftDrink
 	public SoftDrink() {
 		super();
 	}
-	
-	
+
 
 	/**
 	 * this are getters and setters methods for variables of class softDrink
@@ -48,6 +47,12 @@ public class SoftDrink implements ISoftDrink
 	@Override
 	public String toString() {
 		return "SoftDrink [dName=" + dName + ", dCost=" + dCost + "]";
+	}
+
+	@Override
+	public void drink() {
+		// TODO Auto-generated method stub
+		System.out.println("I am Drinking :"+getdName());
 	}
 
 	

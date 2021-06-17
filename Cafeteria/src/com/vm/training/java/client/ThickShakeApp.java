@@ -2,7 +2,6 @@ package com.vm.training.java.client;
 
 import java.util.*;
 import java.util.logging.Filter;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import com.vm.training.java.entity.HotDrink;
